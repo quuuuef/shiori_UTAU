@@ -1,0 +1,182 @@
+body {
+  background-color: #0a0a0a;
+
+  color: #d9d9d9;
+
+  font-family: "Yu Gothic", "Noto Sans JP", sans-serif;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 60px 30px;
+
+  line-height: 1.8;
+}
+
+/* 标题 */
+
+h1 {
+  font-size: 42px;
+
+  font-weight: 300;
+
+  letter-spacing: 8px;
+
+  margin-bottom: 40px;
+
+  border-bottom: 1px solid #444;
+
+  padding-bottom: 20px;
+}
+
+/* 折叠栏 */
+
+details {
+  margin-bottom: 20px;
+
+  border: 1px solid #333;
+
+  background: #111;
+
+  padding: 12px;
+
+  transition: 0.3s;
+}
+
+details:hover {
+  border-color: #777;
+}
+
+/* 小标题 */
+
+summary {
+  cursor: pointer;
+
+  font-size: 18px;
+
+  letter-spacing: 2px;
+
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::before {
+  content: "⊞ ";
+
+  color: #888;
+}
+
+details[open] summary::before {
+  content: "⊟ ";
+}
+
+/* 正文 */
+
+p {
+  color: #bdbdbd;
+
+  font-size: 14px;
+}
+
+/* 下载按钮 */
+
+a {
+  display: inline-block;
+
+  margin-top: 20px;
+
+  padding: 10px 24px;
+
+  border: 1px solid #666;
+
+  color: white;
+
+  text-decoration: none;
+
+  letter-spacing: 2px;
+
+  transition: 0.3s;
+}
+
+a:hover {
+  background: white;
+
+  color: black;
+}
+
+/* 人物介绍 */
+
+.profile {
+  margin-bottom: 50px;
+
+  font-family: "MS Gothic", monospace;
+
+  font-size: 14px;
+
+  line-height: 1.3;
+
+  letter-spacing: 1px;
+
+  color: #cfcfcf;
+
+  text-shadow:
+    1px 0 #ff000033,
+   -1px 0 #00ffff33;
+
+  animation: glitch 2s infinite;
+}
+
+/* 故障动画 */
+
+@keyframes glitch {
+
+  0% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  20% {
+    opacity: 0.85;
+    transform: translateX(-1px);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateX(1px);
+  }
+
+  60% {
+    opacity: 0.9;
+    transform: translateX(0px);
+  }
+
+  80% {
+    opacity: 1;
+    transform: translateX(-1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+/* 缩小介绍行距 */
+
+.profile p {
+  margin: 3px 0;
+}
+
+/* 音频播放器 */
+
+audio {
+  width: 100%;
+
+  margin-top: 10px;
+
+  filter: grayscale(100%);
+}
